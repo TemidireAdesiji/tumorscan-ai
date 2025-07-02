@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Upload MRI Image - TumorScan AI</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="mb-4 text-center">📤 Upload Your MRI Scan</h2>
+    <form method="POST" enctype="multipart/form-data" class="border p-4 bg-white shadow rounded">
+      <div class="form-group">
+        <label for="file">Select an image file (PNG, JPG, JPEG, GIF)</label>
+        <input type="file" name="file" class="form-control-file" required>
+      </div>
+      <button type="submit" class="btn btn-success btn-block mt-3">Predict</button>
+    </form>
+    <div class="text-center mt-4">
+      <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">← Back to Home</a>
+    </div>
+  </div>
+</body>
+
+</html>
